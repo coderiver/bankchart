@@ -1,0 +1,190 @@
+.input
+	width: 100%
+	padding: 8px 9px 6px 
+	+box
+	border: 1px solid #b8b8d8
+	+reg
+	font-size: 20px
+	line-height: 1.4
+	letter-spacing: 0.015em 
+	color: #000 
+	background: #fff 
+.btn
+	display: inline-block
+	+bold
+	font-size: 24px
+	letter-spacing: 0.015em 
+	color: #fff
+	text-transform: uppercase
+	background: #000099  
+	padding: 10px 15px 9px
+	position: relative
+	+box
+	&:active
+		top: 1px
+
+.btn-green
+	display: inline-block
+	+bold
+	font-size: 36px
+	letter-spacing: 0.015em 
+	color: #fff
+	line-height: 1
+	padding: 9px 18px 8px   
+	background: #009900
+	text-decoration: none
+	position: relative
+	&:active
+		top: 1px
+	&_small
+		font-size: 24px
+		padding: 14px 12px 13px
+.select
+	position: relative
+	+user-select(none)
+	width: 100%
+	+box  
+	cursor: pointer
+	+reg
+	font-size: 20px
+.select__text
+	display: block
+	border: 1px solid #788bc7
+	padding: 8px 54px 6px 9px
+	position: relative
+	overflow: hidden
+	-ms-text-overflow: ellipsis
+	text-overflow: ellipsis
+	white-space: nowrap
+	background: #fff 
+	&:before, &:after
+		content: "" 
+		position: absolute
+	&:before
+		top: -1px
+		right: -1px
+		bottom: -1px
+		width: 44px
+		background: #788bc7
+	&:after
+		top: 50%
+		right: 13px
+		margin-top: -3px
+		+arr(19, 10, #000099, b)
+.select__list
+	position: absolute
+	display: none
+	top: 100%
+	left: 0px
+	right: 0px
+	+box
+	border: 1px solid #788bc7
+	border-top: none
+	z-index: 10
+	background: #fff  
+	li
+		cursor: pointer
+		padding: 8px 9px 6px
+	
+.select_small
+	.select__text
+		padding: 2px 42px 1px 9px 
+		+r2
+			padding: 8px 54px 6px 9px
+		&:before
+			width: 33px
+			+r2
+				width: 44px
+		&:after
+			+arr(14, 7, #000099, b)
+			margin-top: -2px
+			right: 10px
+			+r2
+				right: 13px
+				margin-top: -3px
+				+arr(19, 10, #000099, b)
+	.select__list	
+		li
+			padding: 2px 42px 1px 9px 
+			+r2
+				padding: 8px 54px 6px 9px
+
+.radio
+	position: relative
+	display: block
+	+clr
+	cursor: pointer
+	input
+		float: left
+		width: 23px
+		height: 23px
+		visibility: hidden
+		+opacity(0)
+		margin-right: 10px
+		+r2
+			width: 44px
+			height: 44px
+		&:checked + span
+			&:after
+				display: block
+	span
+		overflow: hidden
+		display: block
+		+reg
+		letter-spacing: 0.015em 
+		font-size: 20px
+		line-height: 24px
+		+r2
+			padding: 10px 0 
+		&:before, &:after
+			content: "" 
+			position: absolute
+			+border-radius(50%)
+		&:before
+			top: 0
+			left: 0
+			width: 23px
+			height: 23px
+			border: 2px solid #798cc7
+			background: #fff
+			+box
+			+r2
+				width: 44px
+				height: 44px
+		&:after
+			top: 4px
+			left: 4px
+			width: 15px
+			height: 15px
+			background: #000099 
+			display: none
+			+r2
+				width: 28px
+				height: 28px
+				top: 8px
+				left: 8px
+
+.label	
+	+bold
+	font-size: 20px
+	letter-spacing: 0.015em  
+//Flags
+.flag
+	display: inline-block
+	vertical-align: top
+	&.flag_aud
+		+s(is-aud)
+	&.flag_usd
+		+s(is-usd)
+	&.flag_eur
+		+s(is-eur)
+	&.flag_gbp
+		+s(is-gbp)
+	&.flag_chf
+		+s(is-chf)
+	&.flag_jpy
+		+s(is-jpy)
+	&.flag_hkd
+		+s(is-hkd)
+	&.flag_cad
+		+s(is-cad)

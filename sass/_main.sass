@@ -1,216 +1,689 @@
-// Normally mainpage styles
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.out
+	width: 100%
+	margin: 0 auto
+	min-width: 320px 
+.inner
+	margin: 0 auto
+	max-width: 1280px
+	width: 100%
+	padding: 0 55px 
+	+box
+	+clr
+	+r2
+		padding: 0 30px 
+	+r3
+		padding: 0 20px 
+.logo
+	display: inline-block
+	vertical-align: top
+	+vertical
+	&__text
+		display: inline-block
+		vertical-align: middle
+	h1
+		+chango
+		font-size: 48px
+		line-height: 1.15
+		letter-spacing: 0.015em 
+		color: #000099
+		position: relative
+		display: inline-block
+		+r3
+			font-size: 28px
+		small
+			position: absolute
+			top: 0
+			right: 26px
+			font-size: 18px
+			line-height: 1
+			color: #788cc8 
+			+r3
+				font-size: 10px
+				right: 15px
+				margin: -2px 0 0  
+	span
+		display: block
+		+indie
+		font-size: 17.3px
+		line-height: 1
+		letter-spacing: 0.015em 
+		color: #000001 
+	&__icon
+		display: inline-block
+		vertical-align: middle
+		+s(flag)
+		margin-left: 7px
+		
+.header
+	position: relative
+	z-index: 600 
+	+r2
+		background: #000099 
+	&__right
+		float: right
+		width: 32%
+		max-width: 370px
+		padding: 7px 0 0 0
+		+r2
+			display: none
+	.logo
+		h1
+			+r2
+				color: #fff
+		span
+			+r2
+				display: none
+		.logo__icon
+			+r2
+				display: none
+	.inner
+		padding-top: 35px
+		padding-bottom: 15px 
+		+r2
+			padding-top: 10px
+		
+.search
+	padding: 0 0 15px 
+	.btn
+		float: right
+		margin: 0 0 0 9px 
+	&__input
+		overflow: hidden
+	.input
+		padding: 9px 9px 7px 
+
+.social
+	font-size: 0
+	li
+		display: inline-block
+		vertical-align: top
+		padding: 0 10px 0 0 
+	a
+		display: block
+		&.is-fb
+			+s(is-fb)
+		&.is-gp
+			+s(is-gp)
+		&.is-in
+			+s(is-in)
+		&.is-twitter
+			+s(is-twitter)
+
+.nav
+	background: #dbdbeb 
+	position: relative	
+	+r2
+		display: none
+	ul
+		max-width: 1280px
+		width: 100%
+		padding: 0 55px 
+		+box
+		margin: 0 auto
+	.nav__list
+		font-size: 0
+		text-align: left
+	.nav__item
+		display: inline-block
+		vertical-align: top
+		&.is-active
+			.nav__link
+				background: #000099
+				color: #fff  
+				.nav__icon
+					i
+						&.is-personal
+							+s(is-personal-white)
+						&.is-business
+							+s(is-business-white)
+						&.is-atm
+							+s(is-atm-white)
+						&.is-calculators
+							+s(is-calculators-white)
+						&.is-community
+							+s(is-community-white)
+						&.is-about
+							+s(is-about-white)
+			.drop
+				display: block
+	.nav__icon
+		height: 50px
+		width: 100%
+		+vertical
+		margin-bottom: 8px
+		i
+			display: inline-block
+			vertical-align: middle
+			&.is-personal
+				+s(is-personal-grey)
+			&.is-business
+				+s(is-business-grey)
+			&.is-atm
+				+s(is-atm-grey)
+			&.is-calculators
+				+s(is-calculators-grey)
+			&.is-community
+				+s(is-community-grey)
+			&.is-about
+				+s(is-about-grey)
+	.nav__link
+		+bold
+		font-size: 19px
+		line-height: 1
+		letter-spacing: 0.015em
+		color: #000099
+		display: block
+		width: 150px
+		padding: 27px 0 24px 
+		text-align: center
+		text-decoration: none
+		&:hover
+			.nav__icon
+				i
+					&.is-personal
+						+s(is-personal-blue)
+					&.is-business
+						+s(is-business-blue)
+					&.is-atm
+						+s(is-atm-blue)
+					&.is-calculators
+						+s(is-calculators-blue)
+					&.is-community
+						+s(is-community-blue)
+					&.is-about
+						+s(is-about-blue)
+		+r1
+			width: auto
+			min-width: 120px
+			padding: 27px 5px 24px
+			+box  
+.drop
+	background: #000099
+	+r2
+		display: none
+	.drop__list
+		font-size: 0
+		text-align: left
+		display: none
+		&.is-active
+			display: block
+	li
+		display: inline-block
+		vertical-align: top
+		padding: 0 25px 0 0 
+	.drop__link
+		+reg
+		font-size: 19px
+		letter-spacing: 0.015em 
+		color: #788cc8
+		display: block
+		padding: 8px 0 
+		&:hover
+			color: #fff 
+		&.is-active
+			color: #fff
+			text-decoration: none 
+			
+.main
+	padding: 0 0 40px 0 
+	.inner
+		padding: 0 40px 
+		+r2
+			padding: 0 15px 
+		+r3
+			padding: 0 5px 
+.content
+	padding-top: 25px 
+	padding-bottom: 60px
+	+r2
+		padding-top: 15px
+	.title
+		margin-bottom: 3px
+.content__banner, .banner
+	text-align: center
+	margin-bottom: 15px
+	font-size: 0
+	+r2
+		display: none
+	a
+		display: inline-block
+	img
+		max-width: 100%
+.title
+	color: #c8141e 
+
+.items
+	padding-bottom: 20px
+
+.item
+	margin: 0 -15px 20px
+	padding: 9px 0 0 
+	&:hover
+		background: #dbdbeb
+	.item__inner
+		padding: 0 100px
+		position: relative
+		font-size: 0
+		+r2
+			padding: 0 110px 0 0  
+		+r3
+			padding: 0 100px 0 0 
+	.item__select
+		width: 50%
+		padding: 0 15px 17px
+		+box
+		display: inline-block
+		vertical-align: top
+		+r2
+			width: 100%
+	.item__btn
+		position: absolute
+		bottom: 15px
+		right: 15px
+		+r2
+			bottom: 17px
+		.btn
+			+r2
+				line-height: 119px
+	.item__icon
+		position: absolute
+		left: 0
+		bottom: 2px
+		top: 0
+		width: 100px
+		+vertical
+		+r2
+			display: none
+		i
+			display: inline-block
+			vertical-align: middle
+			&.is-account
+				+s(is-account)
+			&.is-deposit
+				+s(is-deposit)
+			&.is-credit
+				+s(is-credit)
+			&.is-debit
+				+s(is-debit)
+			&.is-homeloan
+				+s(is-homeloan)
+			&.is-car
+				+s(is-car)
+			&.is-money
+				+s(is-money)
+			&.is-insurance
+				+s(is-insurance)
+	.label
+		display: block
+		padding: 2px 10px 2px
+	.item__title
+		color: #c8141e 
+		padding: 0 15px 
+		+r2
+			margin-bottom: 5px
+		
+.text
+	padding: 15px 0 0 
+	h3
+		color: #c8141e
+		margin-bottom: 5px
+		padding: 5px 0 
+	p
+		margin-bottom: 6px
+	&_mod
+		p
+			font-size: 18px
+			margin-bottom: 10px
+	
+.sidebar
+	padding-top: 18px
+	+r2
+		display: none
+.sidebar__inner
+	+clr
+	font-size: 0 
+	+r1
+		margin: 0 -15px 
+	+r2
+		margin: 0
+.sidebar__table
+	.title
+		margin-bottom: 7px
+
+.table
+	margin-bottom: 30px
+	.flag
+		float: left
+		margin: 3px 10px 0 5px 
+	p
+		overflow: hidden
+		text-align: left
+	td
+		+reg
+		font-size: 20px
+		letter-spacing: 0.015em
+		+clr
+		padding: 5px 5px 3px
+		border-bottom: 1px solid #dbdbeb 
+		text-align: right
+	tr
+		&.is-active
+			background: #dbdbeb
+			p, td
+				+bold
+
+.sidebar__banner
+	font-size: 0
+	margin-bottom: 40px
+	+r2
+		display: none
+	a
+		display: inline-block
+	img
+		max-width: 100%
+		
+.form
+	padding: 0 14px 
+	background: #dee3e8 
+	margin-bottom: 50px
+	.title
+		margin-bottom: 7px
+	.form__top
+		padding: 10px 6px 10px
+		+clr
+		+r2
+			padding: 10px 0 12px
+		.title
+			+r2
+				padding: 0 6px 
+	.form__radio
+		max-width: 145px 
+		float: left
+		width: 50%
+	.label
+		display: block
+		padding: 2px 10px 2px
+	.form__select
+		padding-bottom: 17px
+	.form__btn
+		padding: 23px 0 31px
+		text-align: center
+		.btn
+			width: 170px
+			
+.news
+	padding-bottom: 16px
+	.title
+		margin-bottom: 14px
+	.news__item
+		+clr
+		padding-bottom: 15px
+	.news__left
+		float: left
+		width: 70px
+		margin: 0 30px 0 0
+		text-align: right
+		font-size: 0
+		img
+			max-width: 100%
+	.news__right
+		overflow: hidden
+		p
+			a
+				color: #000099 
+				letter-spacing: 0.015em 
+	&.news_img
+		.news__item
+			padding-bottom: 30px	
+.date
+	+reg
+	font-size: 20px
+	letter-spacing: 0.015em 
+	color: #788cc8
+	display: block
+
+.sidebar__box	
+	+r1
+		width: 50%
+		display: inline-block
+		vertical-align: top
+		padding: 0 15px 
+		+box 
+	+r2
+		width: 100%
+		display: block
+		padding: 0
+	.sidebar__banner
+		+r1
+			padding-top: 12px
+	.table
+		+r1
+			margin-bottom: 50px
+.footer
+	background: #dbdbeb 
+	padding: 25px 0 25px 
+	p
+		font-size: 18px
+	.logo
+		margin-bottom: 45px
+		+r1
+			float: left
+		+r2
+			float: none
+			margin-bottom: 20px
+		+r3
+			text-align: left
+		.logo__icon
+			+r2
+				display: none
+		span
+			+r3
+				font-size: 13px
+		h1
+			+r3
+				font-size: 36px
+			small
+				+r3
+					font-size: 12px
+					right: 20px
+					margin: 0
+	.inner
+		+clr
+	.footer__left
+		width: 43%
+		+r1
+			padding-bottom: 40px
+		+r2
+			padding: 0
+	.footer__right
+		width: 57%
+		+r2
+			display: none
+	.footer__left, .footer__right
+		float: left
+		+r1
+			width: 100%
+	.footer__lists
+		font-size: 0
+		+r1
+			overflow: hidden
+		+r2
+			overflow: visible
+	.footer__col
+		display: inline-block
+		width: 100%
+		max-width: 200px
+		vertical-align: top
+		margin-bottom: 55px
+		+r1
+			width: 50%
+			text-align: right
+			margin-bottom: 35px
+		+r2
+			text-align: left
+	.footer__links
+		+r1
+			display: inline-block
+			text-align: left
+		li
+			margin-bottom: 2px
+		a
+			+reg
+			font-size: 18px
+			color: #000099
+			letter-spacing: 0.015em  
+	.social
+		margin-bottom: 45px
+		clear: both
+		+r1
+			margin-bottom: 15px
+	.footer__box
+		display: inline-block
+		width: 33%
+		max-width: 210px
+		vertical-align: top
+		h2
+			margin-bottom: 3px
+	.footer__list
+		li
+			margin-bottom: 5px
+		a
+			+reg
+			font-size: 20px
+			color: #000099
+			letter-spacing: 0.015em 
+
+.btn-menu
+	display: none
+	width: 44px
+	height: 32px
+	+box
+	border-top: 6px solid #fff
+	border-bottom: 6px solid #fff
+	position: relative
+	background: none
+	float: right
+	margin-top: 15px
+	&:before
+		content: "" 
+		position: absolute
+		top: 50%
+		left: 0
+		right: 0
+		margin-top: -3px
+		height: 6px
+		background: #fff 
+		+r3
+			height: 4px
+			margin-top: -2px
+	+r2
+		display: block
+	+r3
+		border-width: 4px
+		width: 30px
+		height: 22px
+		margin-top: 5px 
+		
+
+//mobile menu
+
+.mob
+	position: fixed
+	top: 80px
+	bottom: 0
+	right: -365px
+	background: #bbc5e3
+	overflow: auto
+	z-index: 500
+	max-width: 365px
+	width: 95% 
+	+transition(right 0.4s ease)
+	display: none
+	+r2
+		display: block
+	+r3
+		top: 57px
+	&.is-active
+		right: 0		
+		+box-shadow(-1px 0px 10px 0px rgba(0, 0, 0, 0.8))
+.mob__inner
+	padding: 30px 
+	+r3
+		padding: 20px 
+.mob__search
+	+clr
+	padding-bottom: 35px
+	.btn
+		float: right
+		margin: 0 0 0 10px
+	.mob__input
+		overflow: hidden
+
+.m-nav
+	padding-bottom: 35px
+	.m-nav__item
+		margin: 0 -30px 30px
+		+r3
+			margin: 0 -20px 30px 
+	.m-nav__link
+		+bold
+		font-size: 48px
+		line-height: 1.2
+		margin: 0 30px 
+		&:before
+			position: absolute
+			bottom: 8px
+			right: 0
+			+s(arr-menu) 
+			content: "" 
+	a
+		letter-spacing: 0.015em 
+		color: #000099
+		position: relative
+		display: block
+.m-drop
+	padding: 18px 0 0 
+	display: none
+	&.is-active
+		display: block
+	li
+		margin-bottom: 10px
+	a
+		font-size: 32px
+		padding: 0 60px
+		+reg  
+		&:hover
+			background: #dbdbeb 
+		&.is-active
+			color: #fff
+			background: #000099  
+			text-decoration: none
+.m-box
+	&.m-box_table
+		.title
+			margin-bottom: 10px
+
+.m-sidebar
+	.sidebar
+		+r2
+			display: block
+
+.m-links
+	padding: 10px 0 40px 
+	li
+		padding: 3px 0  
+	a
+		+reg
+		font-size: 20px
+		line-height: 1.3
+		color: #000099 
+.m-tariffs
+	a
+		padding: 0 0 0 30px
+		position: relative
+		&:before
+			position: absolute
+			top: 0
+			left: 0
+			content: "" 
+			+s(b-logo) 

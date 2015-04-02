@@ -47,26 +47,105 @@
 // p
 // 	+jpg(bla)
 
-
+//vars
++font("Cuprum-Regular", Cuprum-Regular)
+=reg
+	font-family: "Cuprum-Regular", Arial, sans-serif
++font("Cuprum-Bold", Cuprum-Bold)
+=bold
+	font-family: "Cuprum-Bold", Arial, sans-serif
++font("Chango-Regular", Chango-Regular)
+=chango
+	font-family: "Chango-Regular", Arial, sans-serif
++font("IndieFlower", IndieFlower)
+=indie
+	font-family: "IndieFlower", Arial, sans-serif
+	
+=r1
+	@media only screen and (max-width: 1200px)
+		@content
+=r2
+	@media only screen and (max-width: 875px)
+		@content
+=r3
+	@media only screen and (max-width: 600px)
+		@content
+.overlay
+	background: none
+	position: fixed
+	top: 0
+	bottom: 0
+	right: 0
+	left: 0
+	z-index: 400 
+	display: none
 body
 	font-family: Arial, sans-serif 
 	font-size: 12px 
 	line-height: 1.4
+	width: 100%
+	&.is-m-body
+		+r2
+			overflow: hidden
+			position: fixed
+		.overlay
+			+r2
+				display: block
+.content
+	width: 66.7%
+.sidebar
+	width: 33.3%
+.content, .sidebar
+	float: left
+	+box
+	padding: 0 15px
+	+r1
+		width: 100%
+
+//reset
+h1, h2, h3, h4, h5, h6, strong, b
+	font-weight: normal
+
+h2, h3
+	+bold
+	letter-spacing: 0.015em 
+h2
+	font-size: 30px
+	line-height: 1.2
+h3
+	font-size: 24px
+	line-height: 1.2
+	&.is-red
+		color: #c8141e 
+h5
+	+bold
+	font-size: 20px
+	color: #000 
+	line-height: 1.3
+p
+	+reg
+	font-size: 20px
+	color: #000 
+	line-height: 1.3
+	strong
+		+bold
+	a
+		color: #000099 
+
+.small
+	display: block
+	+reg
+	font-size: 18px
+	line-height: 1.2
+	color: #959595
+	letter-spacing: 0.015em  
 
 
-// common blocks      
-
-
-
-
-
-
-
-
-
-
-
-
+.link
+	+reg
+	font-size: 20px
+	color: #000099 
+	letter-spacing: 0.015em 
 
 
 
