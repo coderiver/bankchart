@@ -132,18 +132,7 @@
 				color: #fff  
 				.nav__icon
 					i
-						&.is-personal
-							+s(is-personal-white)
-						&.is-business
-							+s(is-business-white)
-						&.is-atm
-							+s(is-atm-white)
-						&.is-calculators
-							+s(is-calculators-white)
-						&.is-community
-							+s(is-community-white)
-						&.is-about
-							+s(is-about-white)
+						color: #fff 
 			.drop
 				display: block
 	.nav__icon
@@ -154,18 +143,10 @@
 		i
 			display: inline-block
 			vertical-align: middle
-			&.is-personal
-				+s(is-personal-grey)
-			&.is-business
-				+s(is-business-grey)
-			&.is-atm
-				+s(is-atm-grey)
-			&.is-calculators
-				+s(is-calculators-grey)
-			&.is-community
-				+s(is-community-grey)
-			&.is-about
-				+s(is-about-grey)
+			font-family: 'Bankchart'
+			font-size: 50px	
+			font-style: normal	
+			color: #8ca0c8 
 	.nav__link
 		+bold
 		font-size: 19px
@@ -180,18 +161,7 @@
 		&:hover
 			.nav__icon
 				i
-					&.is-personal
-						+s(is-personal-blue)
-					&.is-business
-						+s(is-business-blue)
-					&.is-atm
-						+s(is-atm-blue)
-					&.is-calculators
-						+s(is-calculators-blue)
-					&.is-community
-						+s(is-community-blue)
-					&.is-about
-						+s(is-about-blue)
+					color: #000099 
 		+r1
 			width: auto
 			min-width: 120px
@@ -221,8 +191,10 @@
 		&:hover
 			color: #fff 
 		&.is-active
-			color: #fff
+			color: #dbdbeb
 			text-decoration: none 
+			&:hover
+				color: #788cc8 
 			
 .main
 	padding: 0 0 40px 0 
@@ -297,22 +269,11 @@
 		i
 			display: inline-block
 			vertical-align: middle
-			&.is-account
-				+s(is-account)
-			&.is-deposit
-				+s(is-deposit)
-			&.is-credit
-				+s(is-credit)
-			&.is-debit
-				+s(is-debit)
-			&.is-homeloan
-				+s(is-homeloan)
-			&.is-car
-				+s(is-car)
-			&.is-money
-				+s(is-money)
-			&.is-insurance
-				+s(is-insurance)
+			font-size: 70px
+			color: #000099 
+			font-family: 'Bankchart'
+			font-style: normal
+			line-height: 1
 	.label
 		display: block
 		padding: 2px 10px 2px
@@ -432,6 +393,8 @@
 			a
 				color: #000099 
 				letter-spacing: 0.015em 
+				text-decoration: none
+				+border
 	&.news_img
 		.news__item
 			padding-bottom: 30px	
@@ -532,6 +495,8 @@
 			font-size: 18px
 			color: #000099
 			letter-spacing: 0.015em  
+			text-decoration: none
+			+border
 	.social
 		margin-bottom: 45px
 		clear: both
@@ -552,7 +517,8 @@
 			font-size: 20px
 			color: #000099
 			letter-spacing: 0.015em 
-
+			text-decoration: none
+			+border
 .btn-menu
 	display: none
 	width: 44px
@@ -629,11 +595,12 @@
 		+bold
 		font-size: 48px
 		line-height: 1.2
-		margin: 0 30px 
+		padding: 0 30px 
 		&:before
 			position: absolute
-			bottom: 8px
-			right: 0
+			top: 50%
+			right: 30px
+			margin-top: -12px
 			+s(arr-menu) 
 			content: "" 
 	a
@@ -641,6 +608,12 @@
 		color: #000099
 		position: relative
 		display: block
+		&:hover
+			background: #dbdbeb 
+		&:active, &.is-active
+			color: #fff
+			background: #000099  
+			text-decoration: none
 .m-drop
 	padding: 18px 0 0 
 	display: none
@@ -652,12 +625,7 @@
 		font-size: 32px
 		padding: 0 60px
 		+reg  
-		&:hover
-			background: #dbdbeb 
-		&.is-active
-			color: #fff
-			background: #000099  
-			text-decoration: none
+		
 .m-box
 	&.m-box_table
 		.title

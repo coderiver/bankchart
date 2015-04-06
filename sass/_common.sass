@@ -105,6 +105,8 @@ body
 //reset
 h1, h2, h3, h4, h5, h6, strong, b
 	font-weight: normal
+=border
+	border-bottom: 1px solid rgba(0, 0, 153, 0.3) 
 
 h2, h3
 	+bold
@@ -131,7 +133,10 @@ p
 		+bold
 	a
 		color: #000099 
-
+		text-decoration: none
+		+border
+a
+	text-decoration: none
 .small
 	display: block
 	+reg
@@ -148,7 +153,48 @@ p
 	letter-spacing: 0.015em 
 
 
-
+.is-personal
+	&:before
+		content: '\0041'
+.is-business
+	&:before
+		content: '\0042'
+.is-atm
+	&:before
+		content: '\0043'
+.is-calculators
+	&:before
+		content: '\0044'
+.is-community
+	&:before
+		content: '\0045'
+.is-about
+	&:before
+		content: '\0046'
+.is-account
+	&:before
+		content: '\0047'
+.is-deposit
+	&:before
+		content: '\0048'
+.is-credit
+	&:before
+		content: '\0049'
+.is-debit
+	&:before
+		content: '\004A'
+.is-homeloan
+	&:before
+		content: '\004B'
+.is-car
+	&:before
+		content: '\004C'
+.is-money
+	&:before
+		content: '\004D'
+.is-insurance
+	&:before
+		content: '\004E'
 
 
 

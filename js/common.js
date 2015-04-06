@@ -144,12 +144,12 @@ head.ready(function() {
 				scrollbarPosition:"outside",
 				callbacks:{
 				    onTotalScroll:function(){
-				   		$(this).parents('.tables-wrap').find('.js-scroll').addClass('is-left');
-				 		$(this).parents('.tables-wrap').find('.js-scroll').removeClass('is-right');
+				   		$(this).addClass('is-left');
+				 		$(this).removeClass('is-right');
 				    },
 				    onTotalScrollBack: function(){
-				   		$(this).parents('.tables-wrap').find('.js-scroll').removeClass('is-left');
-				 		$(this).parents('.tables-wrap').find('.js-scroll').addClass('is-right');
+				   		$(this).removeClass('is-left');
+				 		$(this).addClass('is-right');
 				    }
 				}
 			});
@@ -159,10 +159,18 @@ head.ready(function() {
 				}
 				else {
 					$(this).parents('.js-scroll').removeClass('is-right');		
+					$(this).parents('.js-scroll').removeClass('is-left');		
 				};
-			});			
-		});
-		$(window).load(function(){			
+			});	
+			$('.tabs__inner ul').each(function() {
+				if ($(this).width() > $(this).parents('.js-scroll').width()) {
+					$(this).parents('.js-scroll').addClass('is-right');
+				}
+				else {
+					$(this).parents('.js-scroll').removeClass('is-right');		
+					$(this).parents('.js-scroll').removeClass('is-left');		
+				};
+			});	
 			$(".js-menu").mCustomScrollbar({
 				axis:"y",
 				scrollButtons:{enable:true},
@@ -179,12 +187,12 @@ head.ready(function() {
 				scrollbarPosition:"outside",
 				callbacks:{
 				    onTotalScroll:function(){
-				   		$(this).parents('.tables-wrap').find('.js-scroll').addClass('is-left');
-				 		$(this).parents('.tables-wrap').find('.js-scroll').removeClass('is-right');
+				   		$(this).addClass('is-left');
+				 		$(this).removeClass('is-right');
 				    },
 				    onTotalScrollBack: function(){
-				   		$(this).parents('.tables-wrap').find('.js-scroll').removeClass('is-left');
-				 		$(this).parents('.tables-wrap').find('.js-scroll').addClass('is-right');
+				   		$(this).removeClass('is-left');
+				 		$(this).addClass('is-right');
 				    }
 				}
 			});
@@ -194,7 +202,14 @@ head.ready(function() {
 				}
 				else {
 					$(this).parents('.js-scroll').removeClass('is-right');		
+					$(this).parents('.js-scroll').removeClass('is-left');		
 				};
+			});	
+			$(".js-menu").mCustomScrollbar({
+				axis:"y",
+				scrollButtons:{enable:true},
+				theme:"my-theme",
+				scrollbarPosition:"outside"
 			});		
 		});
 	})(jQuery);

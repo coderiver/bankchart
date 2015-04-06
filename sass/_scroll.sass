@@ -113,34 +113,27 @@
     height: 44px
     cursor: pointer
     background: #a7a9ac 
+    background: #788bc7 
     top: 0
     &:before
       content: "" 
       position: absolute
       top: 13px
-    &:hover
-      background: #788bc7 
     &:active
       background: #000099 
   .mCSB_buttonLeft
     left: 0
     &:before
-      +arr(10, 19, #6c6d70, l)
+      +arr(10, 19, #000099, l)
       left: 16px
-    &:hover
-      &:before
-        +arr(10, 19, #000099, l)
     &:active
       &:before
         +arr(10, 19, #fff, l)
   .mCSB_buttonRight
     right: 0
     &:before
-      +arr(10, 19, #6c6d70, r)
+      +arr(10, 19, #000099, r)
       right: 16px
-    &:hover
-      &:before
-        +arr(10, 19, #000099, r)
     &:active
       &:before
         +arr(10, 19, #fff, r)
@@ -150,7 +143,7 @@
   position: relative
 .mCSB_draggerContainer
   display: block
-  background: #dbdbeb
+  background: #bbc5e3 
 .mCSB_scrollTools.mCSB_scrollTools_horizontal a + .mCSB_draggerContainer     
   margin: 0 44px  
 .mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar
@@ -171,10 +164,11 @@
       top: 0
       bottom: 0
       width: 10px
-      +box-shadow(0px 0px 30px 0px rgba(0,0,0,0.75))
+      +box-shadow(0px 0px 30px 20px rgba(0, 0, 0, 0.3))
       +opacity(0)
       visibility: hidden
       +transition(all 0.3s)
+      z-index: 10 
     &:before
       right: -10px
     &:after
@@ -184,10 +178,18 @@
       &:before
         visibility: visible
         +opacity(1)
+    .mCSB_buttonLeft
+      background: #a7a9ac 
+      &:before
+        +arr(10, 19, #6c6d70, l)
   &.is-left
     .mCSB_horizontal
       &:after
         visibility: visible
         +opacity(1)
+    .mCSB_buttonRight
+      background: #a7a9ac 
+      &:before
+        +arr(10, 19, #6c6d70, r)
 
 
