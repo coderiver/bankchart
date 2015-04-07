@@ -194,17 +194,24 @@
 		&:hover
 			color: #fff 
 			span
-				border-bottom-color: #fff 
+				// border-bottom-color: #fff 
+				background-image: linear-gradient(transparent 0%, #fff 100%)
 		&.is-active
 			color: #dbdbeb
 			text-decoration: none 
 			span
-				border-bottom: none
+				// border-bottom: none
+				background: none
 			&:hover
 				span
-					border-bottom: 1px solid #dbdbeb 
+					// border-bottom: 1px solid #dbdbeb 
+					// background-image: linear-gradient(transparent 0%, #dbdbeb 100%)
 		span
-			border-bottom: 1px solid #788cc8 
+			// border-bottom: 1px solid #788cc8 
+			background-image: linear-gradient(transparent 0%, #788cc8 100%)
+			background-repeat: repeat-x
+			background-size: 1px 1px
+			background-position: 0 95%
 			
 .main
 	padding: 0 0 40px 0 
@@ -627,8 +634,14 @@
 			background: #000099  
 			text-decoration: none
 		span
-			border-bottom: 2px solid #000099 
-			line-height: 1
+			// border-bottom: 2px solid #000099 
+			// background: url(../img/2px.png) repeat-x 100% 95%
+			// line-height: 1
+			+border
+			-webkit-background-size: 2px 2px 
+			-o-background-size: 2px 2px 
+			background-size: 2px 2px 
+			background-position: 0 85% 
 .m-drop
 	padding: 18px 0 0 
 	display: none
