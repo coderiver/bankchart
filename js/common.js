@@ -143,6 +143,10 @@ head.ready(function() {
 				theme:"my-theme",
 				scrollbarPosition:"outside",
 				callbacks:{
+				    whileScrolling:function(){ 
+						$(this).addClass('is-left');
+						$(this).addClass('is-right');
+					},
 				    onTotalScroll:function(){
 				   		$(this).addClass('is-left');
 				 		$(this).removeClass('is-right');
@@ -186,6 +190,10 @@ head.ready(function() {
 				theme:"my-theme",
 				scrollbarPosition:"outside",
 				callbacks:{
+				    whileScrolling:function(){ 
+						$(this).addClass('is-left');
+						$(this).addClass('is-right');
+					},
 				    onTotalScroll:function(){
 				   		$(this).addClass('is-left');
 				 		$(this).removeClass('is-right');

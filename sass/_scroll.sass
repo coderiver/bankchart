@@ -113,30 +113,30 @@
     height: 44px
     cursor: pointer
     background: #a7a9ac 
-    background: #788bc7 
+    // background: #788bc7 
     top: 0
     &:before
       content: "" 
       position: absolute
       top: 13px
-    &:active
-      background: #000099 
+    // &:active
+    //   background: #000099 
   .mCSB_buttonLeft
     left: 0
     &:before
-      +arr(10, 19, #000099, l)
+      +arr(10, 19, #6c6d70, l)
       left: 16px
-    &:active
-      &:before
-        +arr(10, 19, #fff, l)
+    // &:active
+    //   &:before
+    //     +arr(10, 19, #fff, l)
   .mCSB_buttonRight
     right: 0
     &:before
-      +arr(10, 19, #000099, r)
+      +arr(10, 19, #6c6d70, r)
       right: 16px
-    &:active
-      &:before
-        +arr(10, 19, #fff, r)
+    // &:active
+    //   &:before
+    //     +arr(10, 19, #fff, r)
 
 .mCSB_scrollTools_horizontal 
   top: auto
@@ -174,22 +174,58 @@
     &:after
       left: -10px
   &.is-right
+    .mCSB_buttonRight
+      display: block
+      position: absolute
+      width: 44px
+      height: 44px
+      cursor: pointer
+      background: #a7a9ac 
+      background: #788bc7 
+      top: 0
+    .mCSB_buttonRight
+      right: 0
+      &:before
+        +arr(10, 19, #000099, r)
+        right: 16px
+      &:active
+        background: #000099 
+        &:before
+          +arr(10, 19, #fff, r)
     .mCSB_horizontal
       &:before
         visibility: visible
         +opacity(1)
     .mCSB_buttonLeft
-      background: #a7a9ac 
+      // background: #a7a9ac 
       &:before
-        +arr(10, 19, #6c6d70, l)
+        // +arr(10, 19, #6c6d70, l)
   &.is-left
+    .mCSB_buttonLeft
+      display: block
+      position: absolute
+      width: 44px
+      height: 44px
+      cursor: pointer
+      background: #a7a9ac 
+      background: #788bc7 
+      top: 0
+    .mCSB_buttonLeft
+      right: 0
+      &:before
+        +arr(10, 19, #000099, l)
+        right: 16px
+      &:active
+        background: #000099 
+        &:before
+          +arr(10, 19, #fff, l)
     .mCSB_horizontal
       &:after
         visibility: visible
         +opacity(1)
     .mCSB_buttonRight
-      background: #a7a9ac 
+      // background: #a7a9ac 
       &:before
-        +arr(10, 19, #6c6d70, r)
+        // +arr(10, 19, #6c6d70, r)
 
 

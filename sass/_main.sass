@@ -51,7 +51,7 @@
 	&__icon
 		display: inline-block
 		vertical-align: middle
-		+s(flag)
+		+svg(flag, 76, 61)
 		margin-left: 7px
 		
 .header
@@ -101,13 +101,13 @@
 	a
 		display: block
 		&.is-fb
-			+s(is-fb)
+			+svg(is-fb, 32, 32)
 		&.is-gp
-			+s(is-gp)
+			+svg(is-gp, 32, 32)
 		&.is-in
-			+s(is-in)
+			+svg(is-in, 32, 32)
 		&.is-twitter
-			+s(is-twitter)
+			+svg(is-twitter, 32, 32)
 
 .nav
 	background: #dbdbeb 
@@ -147,6 +147,9 @@
 			font-size: 50px	
 			font-style: normal	
 			color: #8ca0c8 
+			&.is-atm
+				font-size: 60px
+				margin-top: -5px
 	.nav__link
 		+bold
 		font-size: 19px
@@ -190,11 +193,18 @@
 		padding: 8px 0 
 		&:hover
 			color: #fff 
+			span
+				border-bottom-color: #fff 
 		&.is-active
 			color: #dbdbeb
 			text-decoration: none 
+			span
+				border-bottom: none
 			&:hover
-				color: #788cc8 
+				span
+					border-bottom: 1px solid #dbdbeb 
+		span
+			border-bottom: 1px solid #788cc8 
 			
 .main
 	padding: 0 0 40px 0 
@@ -315,7 +325,7 @@
 	margin-bottom: 30px
 	.flag
 		float: left
-		margin: 3px 10px 0 5px 
+		margin: 1px 7px 0 5px 
 	p
 		overflow: hidden
 		text-align: left
@@ -558,7 +568,7 @@
 	top: 80px
 	bottom: 0
 	right: -365px
-	background: #bbc5e3
+	background: #dbdbeb
 	overflow: auto
 	z-index: 500
 	max-width: 365px
@@ -572,6 +582,8 @@
 	&.is-active
 		right: 0		
 		+box-shadow(-1px 0px 10px 0px rgba(0, 0, 0, 0.8))
+	.form
+		background: #dbdbeb 
 .mob__inner
 	padding: 30px 
 	+r3
@@ -594,7 +606,7 @@
 	.m-nav__link
 		+bold
 		font-size: 48px
-		line-height: 1.2
+		line-height: 1.4
 		padding: 0 30px 
 		&:before
 			position: absolute
@@ -609,11 +621,14 @@
 		position: relative
 		display: block
 		&:hover
-			background: #dbdbeb 
+			background: #788cc8 
 		&:active, &.is-active
 			color: #fff
 			background: #000099  
 			text-decoration: none
+		span
+			border-bottom: 2px solid #000099 
+			line-height: 1
 .m-drop
 	padding: 18px 0 0 
 	display: none
@@ -625,6 +640,7 @@
 		font-size: 32px
 		padding: 0 60px
 		+reg  
+		line-height: 55px
 		
 .m-box
 	&.m-box_table
