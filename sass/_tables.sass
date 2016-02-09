@@ -115,3 +115,257 @@
 		padding: 4px 0 6px 
 		a
 			+bold
+
+	
+=table1
+	@media only screen and (min-width: 1201px) and (max-width: 1300px), (max-width: 850px)
+		@content
+
+.tbl
+	*
+		+box
+	.tbl-head, .tbl-body
+		display: table
+		width: 100%
+		table-layout: fixed
+	.tbl-head
+		background: #bbc5e3 
+		text-align: center
+		&.tbl-head_mobile-none
+			+table1
+				display: none
+		&.tbl-head_sm
+			.tbl-col
+				font-size: 20px
+				letter-spacing: 0
+				+r3
+					font-size: 18px
+		.tbl-col
+			+bold
+			font-size: 24px
+			line-height: 1.3 
+			letter-spacing: 0.015em 
+			+r3
+				font-size: 18px
+			&_more, &_btn
+				+table1
+					display: none
+		.tbl-mobile-none
+			+table1
+				display: none
+	.tbl-body
+		+table1
+			display: block
+		.tbl-row
+			+table1
+				border-bottom: 1px solid #bbc5e3 
+				display: block
+				font-size: 0
+			&_mod
+				+table1
+					padding: 20px 0 
+		.tbl-col
+			+reg
+			font-size: 20px
+			border-bottom: 1px solid #bbc5e3
+			+table1
+				display: inline-block
+				vertical-align: top
+				border-bottom: none
+			+r3
+				font-size: 16px
+			&_num
+				text-align: right
+				+table1
+					text-align: center
+			&_btn
+				text-align: right
+				padding-right: 0
+				+table1
+					width: 100%
+					text-align: center
+					padding: 9px 20px 8px
+				.btn-green
+					+table1
+						font-size: 32px
+						padding: 12px 12px 9px
+						width: 100%
+						max-width: 376px
+			
+			&_bank
+				+table1
+					width: 85%
+			&_loc, &_ser
+				+table1
+					width: 100%
+					padding-left: 15%
+			&_solo-loc
+				+r3
+					width: 85%
+			p
+				overflow: hidden
+				text-align: left
+				+r3
+					font-size: 16px
+					margin-top: 3px
+				a
+					color: #000099
+		.tbl-mobile-none
+			+table1
+				display: none
+	.tbl-row
+		display: table-row
+	.tbl-col
+		padding: 9px 9px 8px 
+		display: table-cell
+		vertical-align: middle
+		+r3
+			padding: 9px 3px 8px 
+		&_num
+			width: 5%
+			+table1
+				width: 15%
+		&_name
+			width: 28%
+		&_rate
+			width: 17%
+			text-align: center
+		&_more
+			width: 32%
+			+table1
+				width: 100%
+				padding-left: 15%
+			.m-table__table
+				+table1
+					padding-left: 49px
+				+r3
+					padding-left: 0
+		&_btn
+			width: 18%
+		&_name, &_rate
+			+table1
+				width: 40%
+		&_big-loc
+			width: 32%
+			+table1
+				width: 40%
+		&_solo-loc
+			width: 32%
+			+table1
+				width: 40%
+		&_big-ser
+			width: 63%
+			+table1
+				width: 45%
+		&_bank
+			width: 24%
+			+table1
+				width: 85%
+		&_loc
+			width: 33%
+		&_ser
+			width: 38%
+		&_half
+			width: 50%
+			text-align: center
+		&_name-mod
+			width: 34%
+			text-align: center
+		&_rate-mod
+			width: 26%
+			text-align: center
+		&_more-mod
+			width: 35%
+		&_num-mod
+			width: 5%
+			+table1
+				width: 15%
+		&_six
+			width: 16.66%
+			text-align: center
+		&_five
+			width: 20%
+			text-align: center
+		&_name-mod, &_rate-mod, &_more-mod, &_num-mod, &_six, &_five 
+			+table1
+				width: 100%
+				+clr
+				text-align: left
+				padding: 3px 9px 
+				
+			&:before
+				content: attr(data-title)
+				width: 50%
+				float: left 
+				+bold
+				font-size: 24px
+				line-height: 1.3 
+				letter-spacing: 0.015em 
+				text-align: left
+				display: none
+				+table1
+					display: block
+				+r3
+					font-size: 18px
+					width: 100%
+					padding: 0 0 10px
+		&__in
+			+table1
+				float: left
+				width: 50%
+			+r3
+				width: 100%
+	&__logo
+		width: 40px
+		text-align: center
+		float: left
+		font-size: 0
+		img
+			display: inline-block
+			max-width: 100%
+			max-height: 100%
+	&__rate
+		+bold
+		font-size: 30px
+		line-height: 1
+		letter-spacing: 0.015em 
+		color: #009900 
+	.table-small
+		td
+			+r3
+				font-size: 16px
+				width: 50%
+	&__list
+		max-width: 330px
+		margin: 0 auto
+		+table1
+			margin: 0
+			max-width: 100%
+		li
+			padding: 0 0 0 18px
+			position: relative
+			line-height: 1.2
+			margin-bottom: 5px
+			+r3
+				padding: 0 0 0 12px 
+			&:before
+				position: absolute
+				top: 8px
+				left: 0
+				width: 8px
+				height: 8px 
+				background: #000099
+				+border-radius(50%) 
+				content: "" 
+				+r3
+					top: 6px
+					width: 6px
+					height: 6px
+	a
+		span
+			+border
+	&__link
+		display: inline-block
+		margin: 0 10px 
+		+table1
+			margin: 0
